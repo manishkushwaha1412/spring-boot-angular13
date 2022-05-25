@@ -1,0 +1,21 @@
+<div ngIf="viewMode; else editable">
+    <div ngIf="currentEmployee.id">
+        <h4>Employee</h4>
+        <div>
+            <label><strong>Name:</strong></label> {{currentEmployee.name}}
+        </div>
+        <div>
+            <label><strong>Email:</strong></label> {{currentEmployee.email}}
+        </div>
+        <div>
+            <label><strong>Phone:</strong></label> {{currentEmployee.phone}}
+        </div>
+        <div>
+            <label><strong>Address:</strong></label> {{currentEmployee.address}}
+        </div>
+        <div>
+            <label><strong>Status:</strong></label> {{currentEmployee.status}}
+        </div>
+        <a class="badge badge-warning" routerLink="employee/{{currentEmployee.name}}">Edit</a>
+    </div>
+</div>

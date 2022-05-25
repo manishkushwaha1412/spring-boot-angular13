@@ -1,0 +1,53 @@
+<div>
+    <div class="submit-form">
+      <div *ngIf="!submitted">
+        <div class="form-group">
+          <label for="employee">Employee</label>
+          <input
+            type="text"
+            class="form-control"
+            id="employee"
+            required
+            [(ngModel)]="employee.name"
+            name="name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input
+            class="form-control"
+            id="email"
+            required
+            [(ngModel)]="employee.email"
+            name="email"
+          />
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone</label>
+            <input
+              class="form-control"
+              id="phone"
+              required
+              [(ngModel)]="employee.phone"
+              name="phone"
+            />
+          </div>
+          <div class="form-group">
+            <label for="address">Address</label>
+            <input
+              class="form-control"
+              id="address"
+              required
+              [(ngModel)]="employee.address"
+              name="address"
+            />
+          </div>
+          <br>
+        <button (click)="saveEmployee()" class="btn btn-success">Submit</button>
+      </div>
+      <div *ngIf="submitted">
+        <h4>Employee was created successfully!</h4>
+        <button class="btn btn-success" (click)="newEmployee()">Add</button>
+      </div>
+    </div>
+  </div>
